@@ -1,0 +1,13 @@
+127.0.0.1 - - [13/Feb/2024:10:35:57 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [13/Feb/2024:10:35:58 +0530] "GET /Gererate_Number_List/ HTTP/1.1" 404 776
+0:0:0:0:0:0:0:1 - - [13/Feb/2024:10:35:58 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [13/Feb/2024:10:36:11 +0530] "GET /Gererate_Number_List/generate.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [13/Feb/2024:10:36:25 +0530] "GET /Gererate_Number_List/GenerateNumberServlet?First=1&End=1000&operation=Strong HTTP/1.1" 200 145
+0:0:0:0:0:0:0:1 - - [13/Feb/2024:10:36:48 +0530] "GET /Gererate_Number_List/GenerateNumberServlet?First=1&End=1000&operation=Perfect HTTP/1.1" 200 146
+0:0:0:0:0:0:0:1 - - [13/Feb/2024:10:36:58 +0530] "GET /Gererate_Number_List/GenerateNumberServlet?First=1&End=50&operation=Perfect HTTP/1.1" 200 144
+0:0:0:0:0:0:0:1 - - [13/Feb/2024:10:37:38 +0530] "GET /Gererate_Number_List/GenerateNumberServlet?First=1&End=50&operation=Perfect HTTP/1.1" 200 144
+0:0:0:0:0:0:0:1 - - [13/Feb/2024:10:37:41 +0530] "GET /Gererate_Number_List/generate.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [13/Feb/2024:10:37:51 +0530] "GET /Gererate_Number_List/GenerateNumberServlet?First=1&End=1000&operation=Even HTTP/1.1" 200 -
+127.0.0.1 - - [13/Feb/2024:10:38:46 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [13/Feb/2024:10:38:46 +0530] "GET /Gererate_Number_List/GenerateNumberServlet HTTP/1.1" 500 1303
+0:0:0:0:0:0:0:1 - - [13/Feb/2024:10:39:11 +0530] "GET /Gererate_Number_List/GenerateNumberServlet?First=1&End=100&operation=Even HTTP/1.1" 200 -

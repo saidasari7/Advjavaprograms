@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Details Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="formvalidation.js"></script>
+</head>
+<body>
+    <div class="container mt-5 text-center">
+        <h2 class="text-center">Student Details Form</h2>
+        <form action="AddStudentServlet" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
+
+            <div class="form-group">
+                <label class="font-italic font-weight-bold"
+                for="studentId">student ID:</label>
+                <input type="text" class="form-control-sm"
+                id="studentId" name="student"required>
+            </div>
+            
+            <div class="form-group">
+                <label class="font-italic font-weight-bold" for="firstName">First Name:</label>
+                <input  type="text" class="form-control-sm" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+                <label class="font-italic font-weight-bold" for="lastName">Last Name:</label>
+                <input  type="text" class="form-control-sm" id="lastName" name="lastName" required>
+            </div>
+            <div class="form-group">
+                <label class="font-italic font-weight-bold" for="dob">Date of Birth:</label>
+                <input  type="date" class="form-control-sm" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label class="font-italic font-weight-bold" for="gender">Gender:</label>
+                <select class="font-italic font-weight-bold" id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="font-italic font-weight-bold" for="address">Address:</label>
+                <textarea  id="address"  name="address" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label class="font-italic font-weight-bold" for="phoneNumber">Phone Number:</label>
+                <input type="tel" class="form-control-sm" id="phoneNumber" name="phoneNumber" required>
+            </div>
+            <div class="form-group">
+                <label class="font-italic font-weight-bold"  for="email">Email Address:</label>
+                <input  type="email" class="form-control-sm" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label class="font-italic font-weight-bold"  for="parentName">Parent/Guardian Name:</label>
+                <input type="text" class="form-control-sm" id="parentName" name="parentName" required>
+            </div>
+            <div class="form-group">
+                <label class="font-italic font-weight-bold"  for="parentPhoneNumber">Parent/Guardian Phone Number:</label>
+                <input  type="tel" class="form-control-sm" id="parentPhoneNumber" name="parentPhoneNumber" required>
+            </div>
+            <div class="form-group">
+                <label class="font-italic font-weight-bold"  for="emergencyContact">Emergency Contact:</label>
+                <input type="tel" class="form-control-sm" id="emergencyContact" name="emergencyContact" required>
+            </div>
+            <div class="form-group">
+                <label class="font-italic font-weight-bold"  for="nationality">Nationality:</label>
+                <input  type="text" class="form-control-sm" id="nationality" name="nationality" required>
+            </div>
+            <div class="form-group">
+                <label class="font-italic font-weight-bold"  for="bloodGroup">Blood Group:</label>
+                <input  type="text" class="form-control-sm" id="bloodGroup" name="bloodGroup" required>
+            </div>
+            <div class="form-group">
+                <label class="font-italic font-weight-bold" for="previousSchool">Previous School Details:</label>
+                <textarea  id="previousSchool" name="previousSchool" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label class="font-italic font-weight-bold" for="academicRecords">Academic Records:</label>
+                <textarea  id="academicRecords" name="academicRecords" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label class="font-italic font-weight-bold" for="medicalHistory">Medical History:</label>
+                <textarea  id="medicalHistory" name="medicalHistory" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label class="font-italic font-weight-bold" for="photograph">Photograph:</label>
+                <input type="file" class="font-italic font-weight-bold" id="photograph" name="photograph" required>
+            </div>
+            <div class="form-group">
+                <label class="font-italic font-weight-bold"  for="signature">Signature:</label>
+                <input class="font-italic font-weight-bold" type="file" class="form-control-sm" id="signature" name="signature" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+   
+</body>
+</html>

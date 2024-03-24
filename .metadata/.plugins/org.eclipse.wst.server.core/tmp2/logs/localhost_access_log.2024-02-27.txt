@@ -1,0 +1,15 @@
+127.0.0.1 - - [27/Feb/2024:11:16:21 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [27/Feb/2024:11:16:21 +0530] "GET /RegistrationProject2/WEB-INF/classes HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [27/Feb/2024:11:16:21 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [27/Feb/2024:11:16:38 +0530] "GET /RegistrationProject2/regi.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [27/Feb/2024:11:16:38 +0530] "GET /RegistrationProject2/style.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [27/Feb/2024:11:17:22 +0530] "GET /RegistrationProject2/registrationfromServlrt?first=Ramu........&last=sid&email=aslamkhanpathan43%40gmail.com&dob=2024-02-23&password=sai%407072&repassword=sai%407072&mobile=9951713891&gender=male HTTP/1.1" 200 337
+0:0:0:0:0:0:0:1 - - [27/Feb/2024:11:17:32 +0530] "GET /RegistrationProject2/registrationfromServlrt?first=Ramu........&last=sid&email=aslamkhanpathan43%40gmail.com&dob=2024-02-23&password=sai%407072&repassword=sai%407072&mobile=9951713891&gender=male HTTP/1.1" 200 337
+0:0:0:0:0:0:0:1 - - [27/Feb/2024:11:17:32 +0530] "GET /RegistrationProject2/registrationfromServlrt?first=Ramu........&last=sid&email=aslamkhanpathan43%40gmail.com&dob=2024-02-23&password=sai%407072&repassword=sai%407072&mobile=9951713891&gender=male HTTP/1.1" 200 337
+0:0:0:0:0:0:0:1 - - [27/Feb/2024:11:18:53 +0530] "GET /RegistrationProject2/regi.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [27/Feb/2024:11:18:54 +0530] "GET /RegistrationProject2/regi.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [27/Feb/2024:11:18:54 +0530] "GET /RegistrationProject2/regi.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [27/Feb/2024:11:19:14 +0530] "GET /RegistrationProject2/registrationfromServlrt?first=Ramu........&last=sid&email=aslamkhanpathan43%40gmail.com&dob=2024-02-01&password=sai%407072&repassword=sai%407072&mobile=9951713891&gender=male HTTP/1.1" 200 358
+127.0.0.1 - - [27/Feb/2024:18:01:37 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [27/Feb/2024:18:01:37 +0530] "GET /RegistrationProject2/WEB-INF/classes/com/sai/servlet HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [27/Feb/2024:18:02:29 +0530] "GET /RegistrationProject2/registrationfromServlrt?first=Ramu........&last=sid&email=aslamkhanpathan43%40gmail.com&dob=2024-02-08&password=sai%407072&repassword=sai%407072&mobile=9951713891&gender=male HTTP/1.1" 200 358

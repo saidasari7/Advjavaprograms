@@ -1,0 +1,224 @@
+package com.sai.Product;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.PrintWriter;
+import java.sql.Date;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
+
+import org.apache.commons.io.IOUtils;
+
+
+@WebServlet("/Updateproductservlet")
+@MultipartConfig
+public class Updateproductservlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+    
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String proId= request.getParameter("proId");
+		String UpdatepoductName= request.getParameter("proName");
+		double UpdatepoductPrice=Double.parseDouble(request.getParameter("proPrice"));
+		String UpdatepoductBrand= request.getParameter("proBrand");
+		String UpdatepoductMadeIn= request.getParameter("proMadeIn");
+		Date UpdatepoductMfgDate=Date.valueOf(request.getParameter("proMfgDate"));
+		Date UpdatepoductExpDate=Date.valueOf(request.getParameter("proExpDate"));
+	
+		
+		Product product=new Product();
+		product.setProId(proId);
+		product.setProName(UpdatepoductName);
+		product.setProPrice(UpdatepoductPrice);
+		product.setProBrand(UpdatepoductBrand);
+		product.setProMadeIn(UpdatepoductMadeIn);
+		product.setProMfgDate(UpdatepoductMfgDate);
+		product.setProExpDate(UpdatepoductExpDate);
+		
+		Part filePart=request.getPart("newproImage");//new proImage is the name of your file input input field
+		
+		if(filePart != null && filePart.getSize()> 0)
+		{
+			InputStream inputStream = filePart.getInputStream();
+			byte[] newImagedata = IOUtils.toByteArray(inputStream);
+			product.setProImage(newImagedata);
+		}
+		else
+		{
+			 Part file=request.getPart("existingImage");
+			InputStream inputStream =file.getInputStream();
+			byte[] existingImage = IOUtils.toByteArray(inputStream);
+			product.setProImage(existingImage);
+		}
+		ProductDao dao = new ProductDao();
+		int result =dao.UpdateById(product);
+		if(package com.sai.Product;
+		import java.sql.Connection;
+		import java.sql.PreparedStatement;
+		import java.sql.ResultSet;
+		import java.sql.SQLException;
+		import java.sql.Statement;
+		import java.util.ArrayList;
+		import java.util.List;
+
+
+
+		public class ProductDao {
+
+
+			
+
+		private Product product;
+		public int save(Product product) {
+				
+				Connection connection=null;
+				PreparedStatement preparedStatement=null;
+				int count=0;
+				
+				try {
+					connection=DatabaseUtils.createConnection();
+					preparedStatement=connection.prepareStatement("insert into product_data values(?,?,?,?,?,?,?,?)");
+					
+					preparedStatement.setString(1, product.getProId());
+					preparedStatement.setString(2, product.getProName());
+					
+					preparedStatement.setDouble(3, product.getProPrice());
+					preparedStatement.setString(4, product.getProBrand());
+					preparedStatement.setString(5, product.getProMadeIn());
+					
+					preparedStatement.setDate(6, product.getProMfgDate());
+					preparedStatement.setDate(7, product.getProExpDate());
+					preparedStatement.setBytes(8, product.getProImage());
+					
+					count=preparedStatement.executeUpdate();
+				}
+				catch(SQLException e) {
+					e.printStackTrace();
+				}
+				finally {
+					try {
+						if(connection!=null)
+							connection.close();
+						if(preparedStatement!=null)
+							preparedStatement.close();
+					}
+					catch (Exception e1) {
+						e1.printStackTrace();
+					}
+				}
+				return count;
+		}
+		public List<Product> findAll()
+		{
+			List<Product> productList=new ArrayList<Product>();
+			try(Connection connection=DatabaseUtils.createConnection();
+				Statement statement= connection.createStatement())
+			{
+				ResultSet resultSet= statement.executeQuery("select * from product_data");
+				while(resultSet.next()) {
+					Product product= new Product();
+							product.setProId(resultSet.getString(1));
+							product.setProName(resultSet.getString(2));
+							product.setProPrice(resultSet.getDouble(3));
+							product.setProBrand(resultSet.getString(4));
+							product.setProMadeIn(resultSet.getString(5));
+							product.setProMfgDate(resultSet.getDate(6));
+							product.setProExpDate(resultSet.getDate(7));
+							product.setProImage(resultSet.getBytes(8));
+							productList.add(product);
+						}
+					} 
+					catch (SQLException e) {
+						e.printStackTrace();
+					}	
+					return productList;
+				}
+		     public int DeleteById(String proId)
+		{
+		    	
+		         int count = 0;
+		 try(Connection connection = DatabaseUtils.createConnection();
+		   PreparedStatement preparedStatement = connection.prepareStatement("delete from product_data where PROID=?"))
+		 {
+		  preparedStatement.setString(1,proId);
+		  count = preparedStatement.executeUpdate();
+		  
+		 }
+		 catch(SQLException e)
+		 {
+		  e.printStackTrace();
+		 }
+		 return count;
+		     }
+		     public Product findById(String proId) {
+		         
+		         Product product = null;
+		         try (Connection connection = DatabaseUtils.createConnection();
+		              PreparedStatement preparedStatement = connection.prepareStatement("select * from product_data where PROID=?")) {
+		             
+		        	 preparedStatement.setString(1, proId);
+		        	 
+		             ResultSet resultSet = preparedStatement.executeQuery();
+		             if (resultSet.next()) 
+		             {
+		                 product = new Product();
+		                 product.setProId(resultSet.getString(1));
+		                 product.setProName(resultSet.getString(2));
+		                 product.setProPrice(resultSet.getDouble(3));
+		                 product.setProBrand(resultSet.getString(4));
+		                 product.setProMadeIn(resultSet.getString(5));
+		                 product.setProMfgDate(resultSet.getDate(6));
+		                 product.setProExpDate(resultSet.getDate(7));
+		                 product.setProImage(resultSet.getBytes(8));
+		             }
+		         } catch (SQLException e) {
+		             e.printStackTrace();
+		         }
+		        
+				return product;
+		     }
+		     public int UpdateById(Product product) {
+		    	    String sql = "UPDATE product_data SET proName=?, proPrice=?, proBrand=?, proMadeIn=?, proMfgDate=?, proExpDate=?, proImage=? WHERE ProId=?";
+		    	    int updateResult = 0;
+		    	    try (Connection connection = DatabaseUtils.createConnection()) {
+		    	        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+		    	        preparedStatement.setString(1, product.getProName());
+		    	        preparedStatement.setDouble(2, product.getProPrice());
+		    	        preparedStatement.setString(3, product.getProBrand());
+		    	        preparedStatement.setString(4, product.getProMadeIn());
+		    	        preparedStatement.setDate(5, product.getProMfgDate());
+		    	        preparedStatement.setDate(6, product.getProExpDate());
+		    	        preparedStatement.setBytes(7, product.getProImage());
+		    	        preparedStatement.setString(8, product.getProId());
+		    	        updateResult = preparedStatement.executeUpdate();
+		    	    } catch (SQLException e) {
+		    	        e.printStackTrace();
+		    	    }
+		    	    return updateResult;
+		    	}
+
+		}
+==1)
+		{
+			RequestDispatcher dispatcher = request.getRequestDispatcher("ProductList.jsp");
+			dispatcher.forward(request, response);
+			
+		}
+		else
+		{
+			response.setContentType("text/html");
+			PrintWriter writer = response.getWriter();
+			writer.println("Data Update fail check once...."+result);
+			RequestDispatcher dispatcher = request.getRequestDispatcher("add-product.html");
+			dispatcher.include(request, response);
+		}
+	}
+
+	
+	}

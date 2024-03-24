@@ -1,0 +1,4 @@
+127.0.0.1 - - [01/Mar/2024:23:21:50 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [01/Mar/2024:23:21:50 +0530] "GET /Js_Example/convrtdoller.html HTTP/1.1" 200 492
+0:0:0:0:0:0:0:1 - - [01/Mar/2024:23:21:51 +0530] "GET /Js_Example/secondjavascript.js HTTP/1.1" 200 459
+0:0:0:0:0:0:0:1 - - [01/Mar/2024:23:21:51 +0530] "GET /favicon.ico HTTP/1.1" 404 762

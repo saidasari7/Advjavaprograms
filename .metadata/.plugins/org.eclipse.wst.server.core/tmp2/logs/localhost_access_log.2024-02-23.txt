@@ -1,0 +1,9 @@
+127.0.0.1 - - [23/Feb/2024:00:06:39 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [23/Feb/2024:00:06:39 +0530] "GET /Servlet_Project_22-02/ThiredServlet HTTP/1.1" 405 751
+0:0:0:0:0:0:0:1 - - [23/Feb/2024:00:06:52 +0530] "GET /Servlet_Project_22-02/first.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [23/Feb/2024:00:07:04 +0530] "POST /Servlet_Project_22-02/FirstServlet HTTP/1.1" 200 407
+0:0:0:0:0:0:0:1 - - [23/Feb/2024:00:07:22 +0530] "POST /Servlet_Project_22-02/SecondServlet HTTP/1.1" 200 405
+0:0:0:0:0:0:0:1 - - [23/Feb/2024:00:07:39 +0530] "POST /Servlet_Project_22-02/ThiredServlet HTTP/1.1" 200 204
+0:0:0:0:0:0:0:1 - - [23/Feb/2024:00:08:14 +0530] "POST /Servlet_Project_22-02/ThiredServlet HTTP/1.1" 200 204
+0:0:0:0:0:0:0:1 - - [23/Feb/2024:00:08:21 +0530] "GET /Servlet_Project_22-02/first.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [23/Feb/2024:00:08:36 +0530] "POST /Servlet_Project_22-02/FirstServlet HTTP/1.1" 200 407

@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title> Registraion APPlication</title>
+    </head>
+       <body bgcolor="pink">
+        <h1>Registraion Form</h1>
+    <form method="get" action="RegistrationServlet"/>
+    <label> User Name</label>
+     <input type="text" name="Username" required/>
+
+<br><br>
+    <label> User Password:</label>
+    <input type="text" name="Password" required/>
+    <br><br>
+
+    <label> User Mobile:</label>
+    <input type="number" name="Mobile" required/>
+    <br><br>
+
+    <label> User email:</label>
+    <input type="Email" name="Email" required/>
+    <br><br>
+
+    <label>Gender:</label>
+    <input type="radio"name="Gender" value="Male"/>Male
+    <input type="radio"name="Gender" value="Female"/>Female
+    <input type="radio"name="Gender" value="Other"/>Other
+
+    <br><br>
+
+    <label>DOB</label>
+    <input type="date" name="DOB" required/>
+    <br><br>
+
+    <label>Qualification</label>
+    <input type="checkbox" name="Qualification" value="BSc"/>BSc
+    <input type="checkbox" name="Qualification" value="MCA"/>MCA
+    <input type="checkbox" name="Qualification" value="B.Tech"/>B.Tech
+    <input type="checkbox" name="Qualification" value="M.Tech"/>M.Tech
+    <br><br>
+
+    <label>Country</label>
+    <select name="Country">
+        <option>India</option>
+        <option>Uk</option>
+        <option>USA</option>
+        <option>AUS</option>
+
+    </select>
+    <br><br>
+    <label>Language</label>
+    <select name="Language" size="3" multiple>
+        <option>Telugu</option>
+        <option>English</option>
+        <option>Tamil</option>
+        <option>Kanada</option>
+        <option>Malayalam</option>
+
+    </select>
+    <br><br>
+    <label>Comment Abous us</label>
+    <textarea name="Comment" rows="5" cols="50"> </textarea>
+<br><br>
+    <input type="submit" value="register">
+    
+
+    </form>
+
+       </body>
+</html>

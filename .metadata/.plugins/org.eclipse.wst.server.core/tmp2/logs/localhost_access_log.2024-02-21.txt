@@ -1,0 +1,12 @@
+127.0.0.1 - - [21/Feb/2024:10:38:51 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [21/Feb/2024:10:38:51 +0530] "GET /Gererate_Number_List/ HTTP/1.1" 404 776
+0:0:0:0:0:0:0:1 - - [21/Feb/2024:10:38:52 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [21/Feb/2024:10:39:05 +0530] "GET /Gererate_Number_List/generate.html HTTP/1.1" 200 883
+0:0:0:0:0:0:0:1 - - [21/Feb/2024:10:39:14 +0530] "GET /Gererate_Number_List/GenerateNumberServlet?First=1&End=1000&operation=Even HTTP/1.1" 200 2588
+0:0:0:0:0:0:0:1 - - [21/Feb/2024:10:39:20 +0530] "GET /Gererate_Number_List/GenerateNumberServlet?First=1&End=1000&operation=Even HTTP/1.1" 200 2588
+0:0:0:0:0:0:0:1 - - [21/Feb/2024:10:39:25 +0530] "GET /Gererate_Number_List/GenerateNumberServlet?First=1&End=1000&operation=Perfect HTTP/1.1" 200 155
+127.0.0.1 - - [21/Feb/2024:14:56:58 +0530] "GET / HTTP/1.1" 404 751
+127.0.0.1 - - [21/Feb/2024:23:56:38 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [21/Feb/2024:23:56:38 +0530] "GET /RegistrationProject2/regi.html HTTP/1.1" 200 2119
+0:0:0:0:0:0:0:1 - - [21/Feb/2024:23:56:38 +0530] "GET /RegistrationProject2/style.css HTTP/1.1" 200 1328
+0:0:0:0:0:0:0:1 - - [21/Feb/2024:23:56:38 +0530] "GET /favicon.ico HTTP/1.1" 404 762
